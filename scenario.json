@@ -1,0 +1,19 @@
+{
+	"scenario": {
+		"name": "scenario-1",
+		"steps": [
+			{
+				"name": "step1",
+				"interval": "5000ms",
+				"users": "1000",
+				"hatch_rate": "100"
+			},
+			{
+				"name": "step2",
+				"interval": "10000ms",
+				"users": "3000",
+				"hatch_rate": "200"
+			}
+		]
+	}
+}

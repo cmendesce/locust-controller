@@ -1,0 +1,27 @@
+{
+  "name": "locust-controller",
+  "version": "1.0.0",
+  "description": "A simple controller to locust load generator.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmendesce/locust-controller.git"
+  },
+  "keywords": [
+    "locust",
+    "load-testing",
+    "kubernetes"
+  ],
+  "author": "Carlos Mendes <cmendesce@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cmendesce/locust-controller/issues"
+  },
+  "homepage": "https://github.com/cmendesce/locust-controller#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
