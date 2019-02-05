@@ -1,19 +1,21 @@
 {
-	"scenario": {
-		"name": "scenario-1",
-		"steps": [
-			{
-				"name": "step1",
-				"interval": "5000ms",
-				"users": "1000",
-				"hatch_rate": "100"
-			},
-			{
-				"name": "step2",
-				"interval": "10000ms",
-				"users": "3000",
-				"hatch_rate": "200"
-			}
-		]
-	}
+	"name": "scenario-1",
+	"host": "http://localhost:8089",
+	"steps": [
+		{
+			"interval": 0,
+			"users": 1000,
+			"rate": 100
+		},
+		{
+			"interval": 5000,
+			"users": 3000,
+			"rate": 200
+		},
+		{
+			"interval": 10000,
+			"users": 3000,
+			"rate": 200
+		}
+	]
 }
