@@ -1,21 +1,42 @@
 {
-	"name": "scenario-1",
+	"name": "slow varying",
 	"host": "http://localhost:8089",
+	"duration": 200,
 	"steps": [
 		{
-			"interval": 0,
-			"users": 1000,
+			"time": 0,
+			"users": 100,
 			"rate": 100
 		},
 		{
-			"interval": 5000,
-			"users": 3000,
+			"time": 10,
+			"users": 120,
+			"rate": 120
+		},
+		{
+			"time": 40,
+			"users": 500,
+			"rate": 400
+		},
+		{
+			"time": 50,
+			"users": 800,
+			"rate": 300
+		},
+		{
+			"time": 70,
+			"users": 1500,
+			"rate": 500
+		},
+		{
+			"time": 80,
+			"users": 200,
 			"rate": 200
 		},
 		{
-			"interval": 10000,
-			"users": 3000,
-			"rate": 200
+			"time": 140,
+			"users": 100,
+			"rate": 10
 		}
 	]
 }

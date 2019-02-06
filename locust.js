@@ -1,28 +1,34 @@
-const axios = require('axios')
+const fetch = require('node-fetch')
+const FormData = require('form-data')
 const logger = require('pino')()
 
 const run = (scenario) => {
   logger.info(`starting scenario ${scenario.name} on locust instance ${scenario.host}`)
   const host = scenario.host
-  let interval = scenario.steps[0].interval * -1
+  
   for (let step of scenario.steps) {
-    interval += step.interval
-    setTimeout(swarm, interval, host, step.users, step.rate)
-    logger.info(`step scheduled to swarm with ${step.users} users at rate of ${step.rate} in the next ${interval} ms`)
+    let milliseconds = step.time * 1000
+    setTimeout(swarm, milliseconds, host, step.users, step.rate) 
   }
+  setTimeout(stop, scenario.duration * 1000, host)
 }
 
-const swarm = (host, user, rate) => {
-  console.log(host, user, rate, new Date())
+const stop = async (host) => {
+  fetch(`${host}/stop`).then(() => {
+    logger.info('stoped')
+  })
+}
 
-  axios({
-    baseURL: 'localhost:8089',
-    url: '/swarm',
-    method: 'post',
-    data: {
-      firstName: 'Fred',
-      lastName: 'Flintstone'
-    }
+const swarm = async (host, users, rate) => {
+  const form = new FormData()
+  form.append('locust_count', users)
+  form.append('hatch_rate', rate)
+  const opts = {
+    method: 'POST',
+    body: form
+  }
+  fetch(`${host}/swarm`, opts).then(() => {
+    logger.info(`starting swarm with ${users} users at rate of ${rate}`)
   })
 }
 
