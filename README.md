@@ -9,6 +9,7 @@ The simple scenario below will send to Locust 200 users at time 0s, will increas
 ```json
 {
   "name": "simple scenario",
+  "host": "http://<locust-host-here>",
   "steps": [
   {
     "time": 0,
