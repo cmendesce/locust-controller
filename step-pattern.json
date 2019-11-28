@@ -1,0 +1,47 @@
+{
+	"name": "step pattern",
+	"host": "http://localhost:8089",
+	"duration": 420,
+	"steps": [
+		{
+			"time": 0,
+			"users": 100,
+			"rate": 100
+		},
+		{
+			"time": 60,
+			"users": 300,
+			"rate": 300
+		},
+		{
+			"time": 120,
+			"users": 600,
+			"rate": 300
+		},
+		{
+			"time": 180,
+			"users": 900,
+			"rate": 300
+		},
+		{
+			"time": 240,
+			"users": 600,
+			"rate": 100
+		},
+		{
+			"time": 300,
+			"users": 300,
+			"rate": 100
+		},
+		{
+			"time": 360,
+			"users": 100,
+			"rate": 100
+		},
+		{
+			"time": 420,
+			"users": 0,
+			"rate": 1
+		}
+	]
+}
