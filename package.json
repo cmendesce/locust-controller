@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/cmendesce/locust-controller#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "form-data": "^2.3.3",
